@@ -5,11 +5,20 @@ import Home from '../views/Home.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '/',
-    name: 'Home',
-    component: Home
-  }
+    {
+        path: '/',
+        name: 'Home',
+        component: Home
+    },
+    {
+        path: '*',
+        name: 'PageNotFound',
+        component: () => import("../views/Error/PageNotFound"),
+        meta: {
+            auth: true,
+            title: "Страница не найдена"
+        }
+    }
 ]
 
 const router = new VueRouter({

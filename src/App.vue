@@ -24,7 +24,7 @@
       <v-spacer></v-spacer>
       <ul class="app__navbar-menu d-none d-sm-flex align-center">
         <li :class="{'active': index === 0}" class="app__navbar-menu-item" v-for="(item, index) in menuItems" :key="index">
-          <a :href="item.url">{{  item.title }}</a>
+          <router-link tag="a" :to="item.url">{{  item.title }}</router-link>
         </li>
         <v-btn
             class="btn"
@@ -60,7 +60,7 @@
       </v-btn>
 
       <v-list class="app__menu__drawer-list mx-10">
-        <v-list-item class="app__menu__drawer-list-item my-5" v-for="(item, index) in menuItems" :key="index">
+        <v-list-item :to="item.url" class="app__menu__drawer-list-item my-5" v-for="(item, index) in menuItems" :key="index">
           <v-list-item-content>
             <v-list-item-title class="app__navbar-menu-item" style="font-size: 1.5rem !important;">{{ item.title }}</v-list-item-title>
           </v-list-item-content>
@@ -157,19 +157,25 @@ export default {
   components: {
   },
 
+  watch: {
+    '$route' (to) {
+      document.title = to.meta.title || 'App Inventor Armenia'
+    }
+  },
+
   data: () => ({
     menuItems: [
       {
         title: 'О нас',
-        url: '/'
+        url: '/about'
       },
       {
         title: 'Обучение',
-        url: '/'
+        url: '/learning'
       },
       {
         title: 'Преподавание',
-        url: '/'
+        url: '/teach'
       },
     ],
     drawer: false,
