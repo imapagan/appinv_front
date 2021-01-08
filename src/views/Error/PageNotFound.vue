@@ -1,18 +1,15 @@
 <template>
   <section class="pnf">
     <div class="img">
-      <v-img
-          :src="require('@/assets/img/404.svg')"
-          width="30rem"
-      />
+      <v-img :src="require('@/assets/img/404.svg')" width="30rem" />
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: "PageNotFound",
-}
+  name: "PageNotFound"
+};
 </script>
 
 <style lang="sass" scoped>
@@ -24,5 +21,4 @@ export default {
   display: flex
   justify-content: center
   align-items: center
-
 </style>

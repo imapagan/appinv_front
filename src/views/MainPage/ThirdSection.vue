@@ -1,50 +1,46 @@
 <template>
-    <div class="section">
-        <div class="blot section__blot"></div>
-        <v-row
-                no-gutters
-                class="d-flex align-center"
-        >
-            <v-col
-                    cols="12"
-                    class="col-sm-5"
-            >
-                <div class="section__content text-center text-sm-justify">
-                    <h1 class="section__content-title header-text">
-                      Нажми на кнопку<br> и становись<br> <span class="sec-color">Программистом!</span>
-                    </h1>
-                    <p class="section__content-text content-text">
-                      Здесь ты найдёшь ролики, из которых узнаешь,<br/>
-                      как создавать приложения в MIT App Inventor,<br/>
-                      даже если никогда этого не делал раньше: просто
-                      наведи курсор на видео справа, <br/>
-                      посмотри интро, а дальше все пойдет само<br /> собой. Отправляйся в
-                      мир кодов и шифров, создавай новое!<br/>
-                    </p>
-                </div>
-            </v-col>
+  <div class="section">
+    <div class="blot section__blot"></div>
+    <v-row no-gutters class="d-flex align-center">
+      <v-col cols="12" class="col-sm-5">
+        <div class="section__content text-center text-sm-justify">
+          <h1 class="section__content-title header-text">
+            Нажми на кнопку<br />
+            и становись<br />
+            <span class="sec-color">Программистом!</span>
+          </h1>
+          <p class="section__content-text content-text">
+            Здесь ты найдёшь ролики, из которых узнаешь,<br />
+            как создавать приложения в MIT App Inventor,<br />
+            даже если никогда этого не делал раньше: просто наведи курсор на
+            видео справа, <br />
+            посмотри интро, а дальше все пойдет само<br />
+            собой. Отправляйся в мир кодов и шифров, создавай новое!<br />
+          </p>
+        </div>
+      </v-col>
 
-            <v-col
-                    cols="12"
-                    class="col-sm-7 align-self-start"
-            >
-                <div class="section__img" >
-                    <img src="@/assets/img/Video_ill.svg" alt="">
-                    <div class="section__img__btn_wrapper">
-                        <button class="section__img__btn">
-                            <font-awesome-icon icon="play" class="section__img__btn-icon"></font-awesome-icon>
-                        </button>
-                    </div>
-                </div>
-            </v-col>
-        </v-row>
-    </div>
+      <v-col cols="12" class="col-sm-7 align-self-start">
+        <div class="section__img">
+          <img src="@/assets/img/Video_ill.svg" alt="" />
+          <div class="section__img__btn_wrapper">
+            <button class="section__img__btn">
+              <font-awesome-icon
+                icon="play"
+                class="section__img__btn-icon"
+              ></font-awesome-icon>
+            </button>
+          </div>
+        </div>
+      </v-col>
+    </v-row>
+  </div>
 </template>
 
 <script>
-    export default {
-        name: "ThirdSection"
-    }
+export default {
+  name: "ThirdSection"
+};
 </script>
 
 <style lang="sass" scoped>

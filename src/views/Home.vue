@@ -1,17 +1,17 @@
 <template>
   <div class="home mt-5">
-      <section class="first px-10">
-        <first-section />
-      </section>
-      <section class="second my-8">
-        <second-section />
-      </section>
-      <section class="third my-8 px-10">
-        <third-section />
-      </section>
-      <section class="partners mt-8">
-        <partners />
-      </section>
+    <section class="first px-10">
+      <first-section />
+    </section>
+    <section class="second my-8">
+      <second-section />
+    </section>
+    <section class="third my-8 px-10">
+      <third-section />
+    </section>
+    <section class="partners mt-8">
+      <partners />
+    </section>
   </div>
 </template>
 
@@ -22,12 +22,12 @@ import ThirdSection from "./MainPage/ThirdSection";
 import Partners from "./MainPage/Partners";
 
 export default {
-  name: 'Home',
+  name: "Home",
   components: {
     FirstSection,
     SecondSection,
     ThirdSection,
     Partners
   }
-}
+};
 </script>

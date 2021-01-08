@@ -1,42 +1,59 @@
 <template>
   <v-app>
     <v-btn
-        v-show="fab"
-        v-scroll="onScroll"
-        @click="toTop"
-        fab
-        dark
-        fixed
-        bottom
-        right
-        color="primary"
+      v-show="fab"
+      v-scroll="onScroll"
+      @click="toTop"
+      fab
+      dark
+      fixed
+      bottom
+      right
+      color="primary"
     >
-      <font-awesome-icon style="font-size: 1.6rem;" icon="chevron-up" class=""></font-awesome-icon>
+      <font-awesome-icon
+        style="font-size: 1.6rem;"
+        icon="chevron-up"
+        class=""
+      ></font-awesome-icon>
     </v-btn>
     <v-app-bar
-        app color="white"
-        class="app__navbar rounded-b-xl py-2 px-5" elevate-on-scroll
+      app
+      color="white"
+      class="app__navbar rounded-b-xl py-2 px-5"
+      elevate-on-scroll
     >
-      <router-link to="/" tag="div" class="app__navbar-brand d-flex align-center">
+      <router-link
+        to="/"
+        tag="div"
+        class="app__navbar-brand d-flex align-center"
+      >
         <div class="app__navbar-brand-app">App</div>
         <div class="">Inventor</div>
       </router-link>
       <v-spacer></v-spacer>
       <ul class="app__navbar-menu d-none d-sm-flex align-center">
-        <li :class="{'active': index === 0}" class="app__navbar-menu-item" v-for="(item, index) in menuItems" :key="index">
-          <router-link tag="a" :to="item.url">{{  item.title }}</router-link>
-        </li>
-        <v-btn
-            class="btn"
-            color="#155195"
-            outlined
-            rounded
-            width="7rem"
+        <li
+          :class="{ active: $route.path === item.url }"
+          class="app__navbar-menu-item"
+          v-for="(item, index) in menuItems"
+          :key="index"
         >
+          <router-link tag="a" :to="item.url">{{ item.title }}</router-link>
+        </li>
+        <v-btn class="btn" color="#155195" outlined rounded width="7rem">
           Начать
         </v-btn>
       </ul>
-      <v-btn v-if="$router.currentRoute.name !== 'Login'" class="mx-2 d-flex d-sm-none" fab dark small icon @click="drawer = !drawer">
+      <v-btn
+        v-if="$router.currentRoute.name !== 'Login'"
+        class="mx-2 d-flex d-sm-none"
+        fab
+        dark
+        small
+        icon
+        @click="drawer = !drawer"
+      >
         <div class="app__navbar-hamburger d-flex d-md-none flex-column">
           <span class="app__navbar-hamburger-1"></span>
           <span class="app__navbar-hamburger-2"></span>
@@ -48,81 +65,81 @@
       <router-view />
     </v-content>
     <v-navigation-drawer
-        class="d-sm-none app__menu__drawer rounded-l-xl "
-        style="z-index: 10000"
-        fixed
-        v-model="drawer"
-        temporary
-        right
+      class="d-sm-none app__menu__drawer rounded-l-xl "
+      style="z-index: 10000"
+      fixed
+      v-model="drawer"
+      temporary
+      right
     >
-      <v-btn @click="drawer = !drawer" icon x-large class="app__menu__drawer-close ma-2">
+      <v-btn
+        @click="drawer = !drawer"
+        icon
+        x-large
+        class="app__menu__drawer-close ma-2"
+      >
         <v-icon>mdi-close</v-icon>
       </v-btn>
 
       <v-list class="app__menu__drawer-list mx-10">
-        <v-list-item :to="item.url" class="app__menu__drawer-list-item my-5" v-for="(item, index) in menuItems" :key="index">
+        <v-list-item
+          :to="item.url"
+          class="app__menu__drawer-list-item my-5"
+          v-for="(item, index) in menuItems"
+          :key="index"
+        >
           <v-list-item-content>
-            <v-list-item-title class="app__navbar-menu-item" style="font-size: 1.5rem !important;">{{ item.title }}</v-list-item-title>
+            <v-list-item-title
+              class="app__navbar-menu-item"
+              style="font-size: 1.5rem !important;"
+              >{{ item.title }}</v-list-item-title
+            >
           </v-list-item-content>
         </v-list-item>
       </v-list>
       <v-btn
-          class="btn app__menu__drawer-btn"
-          color="#155195"
-          outlined
-          rounded
-          width="7rem"
-          absolute
+        class="btn app__menu__drawer-btn"
+        color="#155195"
+        outlined
+        rounded
+        width="7rem"
+        absolute
       >
         Начать
       </v-btn>
     </v-navigation-drawer>
 
-    <v-footer
-        class="footer py-16 px-10"
-        padless
-    >
-      <v-row
-          no-gutters
-      >
-        <v-col
-            cols="12"
-            class="col-sm-4"
-        >
+    <v-footer class="footer py-16 px-10" padless>
+      <v-row no-gutters>
+        <v-col cols="12" class="col-sm-4">
           <div class="footer__line footer__line-short"></div>
           <div class="footer__line footer__line-long"></div>
           <div class="footer__text my-6">
-            Программа MIT App Inventor создана,
-            чтобы научить тебя создавать мобильные...
+            Программа MIT App Inventor создана, чтобы научить тебя создавать
+            мобильные...
           </div>
         </v-col>
 
-        <v-col
-            cols="6"
-            class="px-sm-10 col-sm-4"
-        >
+        <v-col cols="6" class="px-sm-10 col-sm-4">
           <div class="footer__line footer__line-short"></div>
           <div class="footer__line footer__line-long"></div>
           <ul class="footer__menu d-flex flex-column text-left my-3">
             <li>
               <router-link
-                  v-for="(item, index) in menuItems" :key="index"
-                  :to="item.url"
-                  tag="div"
-                  style="cursor: pointer"
-                  class="footer__menu-item"
+                v-for="(item, index) in menuItems"
+                :key="index"
+                :to="item.url"
+                tag="div"
+                style="cursor: pointer"
+                class="footer__menu-item"
               >
                 {{ item.title }}
               </router-link>
             </li>
-
           </ul>
         </v-col>
 
-        <v-col
-            cols="6"
-            class="col-sm-4"
-        >
+        <v-col cols="6" class="col-sm-4">
           <div class="footer__line footer__line-short"></div>
           <div class="footer__line footer__line-long"></div>
           <div class="footer__mail my-3">
@@ -130,13 +147,19 @@
           </div>
           <div class="footer__social-media my-3">
             <a href="#">
-              <v-icon color="#7ABFF5" class="footer__social-media-item mx-1">mdi-youtube</v-icon>
+              <v-icon color="#7ABFF5" class="footer__social-media-item mx-1"
+                >mdi-youtube</v-icon
+              >
             </a>
             <a href="#">
-              <v-icon color="#7ABFF5" class="footer__social-media-item mx-1">mdi-facebook</v-icon>
+              <v-icon color="#7ABFF5" class="footer__social-media-item mx-1"
+                >mdi-facebook</v-icon
+              >
             </a>
             <a href="#">
-              <v-icon color="#7ABFF5" class="footer__social-media-item mx-1">mdi-twitter</v-icon>
+              <v-icon color="#7ABFF5" class="footer__social-media-item mx-1"
+                >mdi-twitter</v-icon
+              >
             </a>
           </div>
         </v-col>
@@ -152,43 +175,42 @@
 
 <script>
 export default {
-  name: 'App',
+  name: "App",
 
-  components: {
-  },
+  components: {},
 
   watch: {
-    '$route' (to) {
-      document.title = to.meta.title || 'App Inventor Armenia'
+    $route(to) {
+      document.title = to.meta.title || "App Inventor Armenia";
     }
   },
 
   data: () => ({
     menuItems: [
       {
-        title: 'О нас',
-        url: '/about'
+        title: "О нас",
+        url: "/about"
       },
       {
-        title: 'Обучение',
-        url: '/learning'
+        title: "Обучение",
+        url: "/education"
       },
       {
-        title: 'Преподавание',
-        url: '/teach'
-      },
+        title: "Преподавание",
+        url: "/teaching"
+      }
     ],
     drawer: false,
     fab: false
   }),
   methods: {
     onScroll(e) {
-      if (typeof window === 'undefined') return
-      const top = window.pageYOffset || e.target.scrollTop || 0
-      this.fab = top > 20
+      if (typeof window === "undefined") return;
+      const top = window.pageYOffset || e.target.scrollTop || 0;
+      this.fab = top > 20;
     },
     toTop() {
-      this.$vuetify.goTo(0)
+      this.$vuetify.goTo(0);
     }
   }
 };
@@ -425,6 +447,4 @@ li
 
 .main
   background-color: white !important
-
-
 </style>
