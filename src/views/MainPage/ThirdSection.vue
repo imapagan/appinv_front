@@ -5,8 +5,8 @@
       <v-col cols="12" class="col-sm-5">
         <div class="section__content text-center text-sm-justify">
           <h1 class="section__content-title header-text">
-            Нажми на кнопку<br />
-            и становись<br />
+            Нажми на кнопку <br />
+            и становись <br />
             <span class="sec-color">Программистом!</span>
           </h1>
           <p class="section__content-text content-text">

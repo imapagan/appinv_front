@@ -15,7 +15,7 @@
         <v-col cols="12" class="col-sm-6">
           <div class="section__content text-center text-sm-right">
             <h1 class="section__content-title header-text">
-              Создавай<br />
+              Создавай <br />
               <span class="sec-color">Приложения</span><br />
               На Армянском
             </h1>
