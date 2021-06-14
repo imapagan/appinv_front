@@ -18,33 +18,39 @@ export default {
 <style lang="sass" scoped>
 
 .mouse
-    &__circle
-        width: 10px
-        height: 10px
-        background-color: #7ABFF5
-        border-radius: 50%
-        margin-left: 50%
-        transform: translateX(-50%)
-        margin-bottom: .2rem
-        &-1
-            opacity: .2
-            animation: animation_circle-1 2s infinite
-        &-2
-            opacity: .4
-            animation: animation_circle-2 2s infinite
-            animation-delay: .2s
-        &-3
-            opacity: .7
-            animation: animation_circle-3 2s infinite
-            animation-delay: .5s
-        &-4
-            opacity: .7
-            animation: animation_circle-3 2s infinite
-            animation-delay: .5s
-        &-5
-            opacity: .4
-            animation: animation_circle-2 2s infinite
-            animation-delay: .2s
+  display: flex
+  flex-direction: column
+  width: 28px
+  margin: 20px auto
+  img
+    margin: 9px 0
+  &__circle
+      width: 10px
+      height: 10px
+      background-color: #7ABFF5
+      border-radius: 50%
+      margin-left: 50%
+      transform: translateX(-50%)
+      margin-bottom: .2rem
+      &-1
+          opacity: .2
+          animation: animation_circle-1 2s infinite
+      &-2
+          opacity: .4
+          animation: animation_circle-2 2s infinite
+          animation-delay: .2s
+      &-3
+          opacity: .7
+          animation: animation_circle-3 2s infinite
+          animation-delay: .5s
+      &-4
+          opacity: .7
+          animation: animation_circle-3 2s infinite
+          animation-delay: .5s
+      &-5
+          opacity: .4
+          animation: animation_circle-2 2s infinite
+          animation-delay: .2s
 
 @keyframes animation_circle-1
     0%

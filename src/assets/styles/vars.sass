@@ -1,0 +1,52 @@
+// –– HELPERS ––
+@function get-vw($target)
+  $vwContext: (375 * 0.01) * 1px
+  @return ($target / $vwContext) * 1vw
+
+
+// –– CONTAINER ––
+$desktopContainerWidth: 1200px
+$tabletLargeContainerWidth: 1020px
+$tabletContainerWidth: 668px
+$phoneContainerWidth: get-vw(335px)
+
+// –– RESPONSIVE ––
+$largeDesktopMinWidth: 1600px
+
+$desktopMaxWidth: 1599px
+$desktopMinWidth: 1440px
+
+$tabletLargeMaxWidth: 1439px
+$tabletLargeMinWidth: 1024px
+
+$tabletMaxWidth: 1023px
+$tabletMinWidth: 768px
+
+$phoneMaxWidth: 767px
+
+
+$primary: #155195
+$darkBlue: #011D3D
+$blueLight: #7ABFF5
+$pink: #EA3D90
+$gray: #777777
+$lightGray: #D7DDE3
+$textBlack: #151515
+
+
+
+@mixin desktopMedia
+  @media screen and (max-width: $desktopMaxWidth)
+    @content
+
+@mixin tabletLargeMedia
+  @media screen and (max-width: $tabletLargeMaxWidth)
+    @content
+
+@mixin tabletMedia
+  @media screen and (max-width: $tabletMaxWidth)
+    @content
+
+@mixin phoneMedia
+  @media screen and (max-width: $tabletMaxWidth)
+    @content
