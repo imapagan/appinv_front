@@ -19,6 +19,8 @@ export default {
 
 .card
   width: 500px
+  @include phoneMedia
+    width: 100%
 
 .a-title
   color: $primary

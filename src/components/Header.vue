@@ -26,6 +26,11 @@
           Начать
         </WideButton>
       </a>
+      <div class="locale-mobile ml-3">
+        <InlineLink @click="changeLocale">{{
+          $i18n.locale === "ru" ? "Rus" : "Arm"
+        }}</InlineLink>
+      </div>
     </ul>
 
     <v-btn
@@ -56,13 +61,16 @@ export default {
   props: ["menuItems"],
   created() {
     const locale = localStorage.getItem("locale");
-    console.log(locale);
     if (locale) this.$i18n.locale = locale;
   },
   methods: {
     setLocale(locale) {
       this.$i18n.locale = locale;
       localStorage.setItem("locale", locale);
+    },
+
+    changeLocale() {
+      this.$i18n.locale === "ru" ? this.setLocale("arm") : this.setLocale("ru");
     }
   }
 };
@@ -75,7 +83,8 @@ export default {
   display: flex
   align-items: center
   @include phoneMedia
-    display: none
+    li
+      display: none
   li
     margin: 0 30px
 
@@ -85,6 +94,13 @@ export default {
 .locale
   margin-left: 50px
   color: $primary
+  @include phoneMedia
+    display: none
+
+.locale-mobile
+  display: none
+  @include phoneMedia
+    display: block
 </style>
 
 <style lang="sass">

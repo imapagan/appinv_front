@@ -1,9 +1,14 @@
 <template>
-  <div class="buttonWrapper">
-    <button class="button">
-      <font-awesome-icon icon="play" class="buttonIcon"></font-awesome-icon>
-    </button>
-  </div>
+  <a
+    target="_blank"
+    href="https://www.youtube.com/channel/UCIT2bmEhea9ckiJp2_wCRSQ"
+  >
+    <div class="buttonWrapper">
+      <button class="button">
+        <font-awesome-icon icon="play" class="buttonIcon"></font-awesome-icon>
+      </button>
+    </div>
+  </a>
 </template>
 
 <script>
@@ -16,8 +21,8 @@ export default {
 @import "../assets/styles/vars"
 
 .buttonWrapper
-  width: 97px
-  height: 97px
+  width: 80px
+  height: 80px
   border-radius: 50%
   outline: none
   border: none
@@ -35,11 +40,11 @@ export default {
   display: flex
   justify-content: center
   align-items: center
-  width: 68px
-  height: 68px
+  width: 50px
+  height: 50px
 
 .buttonIcon
-  font-size: 30px
+  font-size: 25px
   color: #ffffff
   transform: translate(3px)
 

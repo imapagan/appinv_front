@@ -64,50 +64,50 @@
     <!--    <v-content>-->
     <!--      <router-view />-->
     <!--    </v-content>-->
-    <!--    <v-navigation-drawer-->
-    <!--      class="d-sm-none app__menu__drawer rounded-l-xl "-->
-    <!--      style="z-index: 10000"-->
-    <!--      fixed-->
-    <!--      v-model="drawer"-->
-    <!--      temporary-->
-    <!--      right-->
-    <!--    >-->
-    <!--      <v-btn-->
-    <!--        @click="drawer = !drawer"-->
-    <!--        icon-->
-    <!--        x-large-->
-    <!--        class="app__menu__drawer-close ma-2"-->
-    <!--      >-->
-    <!--        <v-icon>mdi-close</v-icon>-->
-    <!--      </v-btn>-->
+    <v-navigation-drawer
+      class="d-sm-none app__menu__drawer rounded-l-xl "
+      style="z-index: 10000"
+      fixed
+      v-model="drawer"
+      temporary
+      right
+    >
+      <v-btn
+        @click="drawer = !drawer"
+        icon
+        x-large
+        class="app__menu__drawer-close ma-2"
+      >
+        <v-icon>mdi-close</v-icon>
+      </v-btn>
 
-    <!--      <v-list class="app__menu__drawer-list mx-10">-->
-    <!--        <v-list-item-->
-    <!--          :to="item.url"-->
-    <!--          class="app__menu__drawer-list-item my-5"-->
-    <!--          v-for="(item, index) in menuItems"-->
-    <!--          :key="index"-->
-    <!--        >-->
-    <!--          <v-list-item-content>-->
-    <!--            <v-list-item-title-->
-    <!--              class="app__navbar-menu-item"-->
-    <!--              style="font-size: 1.5rem !important;"-->
-    <!--              >{{ item.title }}</v-list-item-title-->
-    <!--            >-->
-    <!--          </v-list-item-content>-->
-    <!--        </v-list-item>-->
-    <!--      </v-list>-->
-    <!--      <v-btn-->
-    <!--        class="btn app__menu__drawer-btn"-->
-    <!--        color="#155195"-->
-    <!--        outlined-->
-    <!--        rounded-->
-    <!--        width="7rem"-->
-    <!--        absolute-->
-    <!--      >-->
-    <!--        Начать-->
-    <!--      </v-btn>-->
-    <!--    </v-navigation-drawer>-->
+      <v-list class="app__menu__drawer-list mx-10">
+        <v-list-item
+          :to="item.url"
+          class="app__menu__drawer-list-item my-5"
+          v-for="(item, index) in menuItems"
+          :key="index"
+        >
+          <v-list-item-content>
+            <v-list-item-title
+              class="app__navbar-menu-item"
+              style="font-size: 1.5rem !important;"
+              >{{ item.title }}</v-list-item-title
+            >
+          </v-list-item-content>
+        </v-list-item>
+      </v-list>
+      <v-btn
+        class="btn app__menu__drawer-btn"
+        color="#155195"
+        outlined
+        rounded
+        width="7rem"
+        absolute
+      >
+        Начать
+      </v-btn>
+    </v-navigation-drawer>
     <Header :menu-items="menuItems" />
 
     <v-content>
@@ -151,19 +151,12 @@
             hayappinventor@gmail.com
           </div>
           <div class="footer__social-media my-3">
-            <a href="#">
+            <a
+              target="_blank"
+              href="https://www.youtube.com/channel/UCIT2bmEhea9ckiJp2_wCRSQ"
+            >
               <v-icon color="#7ABFF5" class="footer__social-media-item mx-1"
                 >mdi-youtube</v-icon
-              >
-            </a>
-            <a href="#">
-              <v-icon color="#7ABFF5" class="footer__social-media-item mx-1"
-                >mdi-facebook</v-icon
-              >
-            </a>
-            <a href="#">
-              <v-icon color="#7ABFF5" class="footer__social-media-item mx-1"
-                >mdi-twitter</v-icon
               >
             </a>
           </div>

@@ -53,31 +53,34 @@ import Stage from "@/components/Stage";
 import Blot from "@/components/Blot";
 import Partners from "@/components/Partners";
 import BouncedButton from "@/components/BouncedButton";
+
 export default {
   name: "Home",
   components: { BouncedButton, Partners, Blot, Stage, Mouse, TitleText },
-  data: () => ({
-    stages: [
-      {
-        id: 1,
-        img: require("@/assets/img/card_1.png"),
-        title: "Образовательная",
-        description: "Используется в ИТ-классах по всему миру."
-      },
-      {
-        id: 2,
-        img: require("@/assets/img/card_2.png"),
-        title: "Простая",
-        description: "Собирайте приложения как пазлы."
-      },
-      {
-        id: 3,
-        img: require("@/assets/img/card_3.png"),
-        title: "На армянском",
-        description: "Мы перевели всю программу для вас."
-      }
-    ]
-  }),
+  computed: {
+    stages() {
+      return [
+        {
+          id: 1,
+          img: require("@/assets/img/card_1.png"),
+          ...this.$t("stages")[0]
+        },
+        {
+          id: 2,
+          img: require("@/assets/img/card_2.png"),
+          ...this.$t("stages")[1]
+        },
+        {
+          id: 3,
+          img: require("@/assets/img/card_3.png"),
+          ...this.$t("stages")[2]
+        }
+      ];
+    }
+  },
+  data() {
+    return {};
+  },
   methods: {}
 };
 </script>
@@ -109,10 +112,14 @@ export default {
   display: flex
   justify-content: space-between
   align-items: center
+  @include phoneMedia
+    flex-direction: column-reverse
 
 .introImg
   width: 600px
   z-index: 2
+  @include phoneMedia
+    width: 100%
 
 .introContent
   z-index: 2
@@ -121,6 +128,15 @@ export default {
   margin-top: 80px
   display: flex
   justify-content: space-between
+  @include phoneMedia
+    width: 100%
+    align-items: center
+    flex-direction: column
+    justify-content: center
+
+    & > div
+      &:not(last-child)
+        margin-bottom: 40px
 
 .beProgrammer
   margin-top: 120px
@@ -129,9 +145,16 @@ export default {
   align-items: center
   position: relative
 
+  @include phoneMedia
+    flex-direction: column
+    margin-top: get-vw(40px)
+
 .beProgrammerImg
   z-index: 2
   width: 600px
+  @include phoneMedia
+    width: 100%
+    margin-top: 40px
 
 .beProgrammerContent
   z-index: 2
@@ -141,6 +164,9 @@ export default {
   position: absolute
   right: 540px
   bottom: 22px
+  @include phoneMedia
+    right: get-vw(10px)
+    bottom: get-vw(-50px)
 
 .partners
   margin-top: 110px

@@ -3,13 +3,12 @@
     <div class="partners__header">
       <h1 class="header-text headingH1">Партнеры</h1>
       <p class="content-text pNormal pt-5 px-5">
-        Узнайте больше о наших <a href="#">партнерах</a> и наших совместных
-        проектах.
+        {{ $t("partnersTitle") }}
       </p>
       <p class="content-text pt-5 px-5">
         <a
           href="mailto:hayappinventor@gmail.com?subject=Партнерство с AppInventor Armenia"
-          >Ваш логотип может оказаться здесь!</a
+          >{{ $t("partnersSubtitle") }}</a
         >
       </p>
     </div>
