@@ -1,0 +1,63 @@
+@import "vars"
+
+.headingH1
+  font-family: Roboto, sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 48px
+  line-height: 1.1
+  letter-spacing: -0.04em  
+  color: $textBlack
+
+.headingH2
+  font-family: Roboto, sans-serif
+  font-style: normal
+  font-weight: bold
+  font-size: 32px
+  line-height: 1.19
+  color: $textBlack
+
+.pNormal
+  font-family: Roboto, sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 1.56
+  color: $textBlack
+
+.pSmall
+  font-family: Roboto, sans-serif
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 1.2
+  color: $textBlack
+
+
+.mobileHeadingH1
+  @include phoneMedia
+    font-family: Roboto, sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: get-vw(30px)
+    line-height: 1.17
+    letter-spacing: -0.04em
+    color: $textBlack
+
+.mobileHeadingH2
+  @include phoneMedia
+    font-family: Roboto, sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: get-vw(23px)
+    line-height: 1.22
+    color: $textBlack
+
+.mobilePNormal
+  @include phoneMedia
+    font-family: Roboto, sans-serif
+    font-style: normal
+    font-weight: normal
+    font-size: get-vw(18px)
+    line-height: 1.62
+    color: $textBlack

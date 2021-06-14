@@ -1,8 +1,8 @@
 <template>
   <div class="partners py-12">
     <div class="partners__header">
-      <h1 class="header-text">Партнеры</h1>
-      <p class="content-text pt-5 px-5">
+      <h1 class="header-text headingH1">Партнеры</h1>
+      <p class="content-text pNormal pt-5 px-5">
         Узнайте больше о наших <a href="#">партнерах</a> и наших совместных
         проектах.
       </p>
@@ -87,7 +87,6 @@ export default {
 <style lang="sass" scoped>
 .partners
     background-color: #F3F3F3
-    margin: 0 !important
     &__header
         width: 100%
         text-align: center
