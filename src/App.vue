@@ -119,10 +119,6 @@
         <v-col cols="12" class="col-sm-4">
           <div class="footer__line footer__line-short"></div>
           <div class="footer__line footer__line-long"></div>
-          <div class="footer__text my-6">
-            Программа MIT App Inventor создана, чтобы научить тебя создавать
-            мобильные...
-          </div>
         </v-col>
 
         <v-col cols="6" class="px-sm-10 col-sm-4">
@@ -164,7 +160,7 @@
       </v-row>
       <v-row>
         <div class="footer__cr">
-          © Apaga.org 2020
+          © Apaga.org 2021
         </div>
       </v-row>
     </v-footer>

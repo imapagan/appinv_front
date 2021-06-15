@@ -1,7 +1,7 @@
 <template>
   <div class="partners py-12">
     <div class="partners__header">
-      <h1 class="header-text headingH1">Партнеры</h1>
+      <h1 class="header-text headingH1">{{ $t("partners") }}</h1>
       <p class="content-text pNormal pt-5 px-5">
         {{ $t("partnersTitle") }}
       </p>
@@ -18,17 +18,19 @@
         v-for="(partner, index) in partners"
         :key="index"
       >
-        <div
-          class="partners__carousel-item-img d-flex align-center justify-center"
-        >
-          <v-img
-            width="130px"
-            height="130px"
-            contain
-            :src="partner.logo"
-            draggable="false"
-          />
-        </div>
+        <a target="_blank" :href="partner.url">
+          <div
+            class="partners__carousel-item-img d-flex align-center justify-center"
+          >
+            <v-img
+              width="130px"
+              height="130px"
+              contain
+              :src="partner.logo"
+              draggable="false"
+            />
+          </div>
+        </a>
       </div>
     </VueSlickCarousel>
   </div>
@@ -44,20 +46,17 @@ export default {
   components: {
     VueSlickCarousel
   },
-  computed: {
-    partnersFilter() {
-      let newArray = [];
-      for (let i = 0; i < this.partners.length; i += 3) {
-        newArray.push(this.partners.slice(i, i + 3));
-      }
-      return newArray;
-    }
-  },
   data: () => ({
     partners: [
       {
         name: "Mara",
+        url: "#",
         logo: require("@/assets/img/mara_partner.svg")
+      },
+      {
+        name: "Space Shop",
+        url: "https://www.facebook.com/SirovTiezerqic/",
+        logo: require("@/assets/img/ss-partner.png")
       }
     ],
     settings: {
