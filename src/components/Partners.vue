@@ -55,7 +55,7 @@ export default {
       },
       {
         name: "Space Shop",
-        url: "https://www.facebook.com/SirovTiezerqic/",
+        url: "https://spaceshop42.com/",
         logo: require("@/assets/img/ss-partner.png")
       }
     ],
