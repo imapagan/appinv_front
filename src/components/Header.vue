@@ -23,7 +23,7 @@
       </li>
       <a target="_blank" href="http://ai2.appinventor.mit.edu/?locale=ru">
         <WideButton>
-          Начать
+          {{ $t("startButton") }}
         </WideButton>
       </a>
       <div class="locale-mobile ml-3">
