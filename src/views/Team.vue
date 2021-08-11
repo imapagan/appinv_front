@@ -34,10 +34,6 @@ export default {
         name: "Мгер Хачатрян"
       },
       {
-        image: require("@/assets/img/team-girl.png"),
-        name: "Нелли Хачатрян"
-      },
-      {
         image: require("@/assets/img/team-3.png"),
         name: "Елена Акобян"
       },
@@ -81,21 +77,21 @@ export default {
       }
     ],
     teamManagers: [
-      {
-        image: require("@/assets/img/team-13.png"),
-        name: "Милана Сугян",
-        role: "Внешние связи"
-      },
+      // {
+      //   image: require("@/assets/img/team-13.png"),
+      //   name: "Милана Сугян",
+      //   role: "Внешние связи"
+      // },
       {
         image: require("@/assets/img/team-14.png"),
         name: "Элина Минасян",
         role: "Scrum мастер"
       },
-      {
-        image: require("@/assets/img/team-15.jpg"),
-        name: "Анна Нурбекян",
-        role: "Комьюнити менеджер"
-      },
+      // {
+      //   image: require("@/assets/img/team-15.jpg"),
+      //   name: "Анна Нурбекян",
+      //   role: "Комьюнити менеджер"
+      // },
       {
         image: require("@/assets/img/team-16.png"),
         name: "Арман Исоян",

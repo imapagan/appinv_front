@@ -89,21 +89,26 @@ export default {
     }
   },
 
+  computed: {
+    menuItems() {
+      return [
+        {
+          name: this.$t("menuItems")[0],
+          url: "/about"
+        },
+        {
+          name: this.$t("menuItems")[1],
+          url: "/team"
+        },
+        {
+          name: this.$t("menuItems")[2],
+          url: "/education"
+        }
+      ];
+    }
+  },
+
   data: () => ({
-    menuItems: [
-      {
-        name: "О нас",
-        url: "/about"
-      },
-      {
-        name: "Команда",
-        url: "/team"
-      },
-      {
-        name: "Обучение",
-        url: "/education"
-      }
-    ],
     drawer: false,
     fab: false
   }),
