@@ -10,8 +10,6 @@
       />
       <TitleText class="introContent" :text="$t('mainText')">
         <template v-slot:title>
-          <!--          Создавай<br />-->
-          <!--          <span class="blueLight">Приложения</span><br />На Армянском-->
           {{ $t("mainTitle") }}
         </template>
       </TitleText>
@@ -31,8 +29,6 @@
       <BouncedButton class="beProgrammerBtn" />
       <TitleText class="beProgrammerContent" :text="$t('programmerText')">
         <template v-slot:title>
-          <!--          Нажми на кнопку<br />и становись-->
-          <!--          <span class="blueLight">Программистом!</span>-->
           {{ $t("programmerTitle") }}
         </template>
       </TitleText>

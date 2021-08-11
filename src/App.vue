@@ -17,97 +17,6 @@
         class=""
       ></font-awesome-icon>
     </v-btn>
-    <!--    &lt;!&ndash;    <v-app-bar&ndash;&gt;-->
-    <!--    &lt;!&ndash;      app&ndash;&gt;-->
-    <!--    &lt;!&ndash;      color="white"&ndash;&gt;-->
-    <!--    &lt;!&ndash;      class="app__navbar rounded-b-xl py-2 px-5"&ndash;&gt;-->
-    <!--    &lt;!&ndash;      elevate-on-scroll&ndash;&gt;-->
-    <!--    &lt;!&ndash;    >&ndash;&gt;-->
-    <!--    &lt;!&ndash;      <router-link&ndash;&gt;-->
-    <!--    &lt;!&ndash;        to="/"&ndash;&gt;-->
-    <!--    &lt;!&ndash;        tag="div"&ndash;&gt;-->
-    <!--    &lt;!&ndash;        class="app__navbar-brand d-flex align-center"&ndash;&gt;-->
-    <!--    &lt;!&ndash;      >&ndash;&gt;-->
-    <!--    &lt;!&ndash;        <div class="app__navbar-brand-app">App</div>&ndash;&gt;-->
-    <!--    &lt;!&ndash;        <div class="">Inventor</div>&ndash;&gt;-->
-    <!--    &lt;!&ndash;      </router-link>&ndash;&gt;-->
-    <!--    &lt;!&ndash;      <v-spacer></v-spacer>&ndash;&gt;-->
-    <!--    &lt;!&ndash;      <ul class="app__navbar-menu d-none d-sm-flex align-center">&ndash;&gt;-->
-    <!--    &lt;!&ndash;        <li&ndash;&gt;-->
-    <!--    &lt;!&ndash;          :class="{ active: $route.path === item.url }"&ndash;&gt;-->
-    <!--    &lt;!&ndash;          class="app__navbar-menu-item"&ndash;&gt;-->
-    <!--    &lt;!&ndash;          v-for="(item, index) in menuItems"&ndash;&gt;-->
-    <!--    &lt;!&ndash;          :key="index"&ndash;&gt;-->
-    <!--    &lt;!&ndash;        >&ndash;&gt;-->
-    <!--    &lt;!&ndash;          <router-link tag="a" :to="item.url">{{ item.title }}</router-link>&ndash;&gt;-->
-    <!--    &lt;!&ndash;        </li>&ndash;&gt;-->
-    <!--    &lt;!&ndash;        <v-btn class="btn" color="#155195" outlined rounded width="7rem">&ndash;&gt;-->
-    <!--    &lt;!&ndash;          Начать&ndash;&gt;-->
-    <!--    &lt;!&ndash;        </v-btn>&ndash;&gt;-->
-    <!--    &lt;!&ndash;      </ul>&ndash;&gt;-->
-    <!--    &lt;!&ndash;      <v-btn&ndash;&gt;-->
-    <!--    &lt;!&ndash;        v-if="$router.currentRoute.name !== 'Login'"&ndash;&gt;-->
-    <!--    &lt;!&ndash;        class="mx-2 d-flex d-sm-none"&ndash;&gt;-->
-    <!--    &lt;!&ndash;        fab&ndash;&gt;-->
-    <!--    &lt;!&ndash;        dark&ndash;&gt;-->
-    <!--    &lt;!&ndash;        small&ndash;&gt;-->
-    <!--    &lt;!&ndash;        icon&ndash;&gt;-->
-    <!--    &lt;!&ndash;        @click="drawer = !drawer"&ndash;&gt;-->
-    <!--    &lt;!&ndash;      >&ndash;&gt;-->
-    <!--    &lt;!&ndash;        <div class="app__navbar-hamburger d-flex d-md-none flex-column">&ndash;&gt;-->
-    <!--    &lt;!&ndash;          <span class="app__navbar-hamburger-1"></span>&ndash;&gt;-->
-    <!--    &lt;!&ndash;          <span class="app__navbar-hamburger-2"></span>&ndash;&gt;-->
-    <!--    &lt;!&ndash;          <span class="app__navbar-hamburger-3"></span>&ndash;&gt;-->
-    <!--    &lt;!&ndash;        </div>&ndash;&gt;-->
-    <!--    &lt;!&ndash;      </v-btn>&ndash;&gt;-->
-    <!--    &lt;!&ndash;    </v-app-bar>&ndash;&gt;-->
-    <!--    <v-content>-->
-    <!--      <router-view />-->
-    <!--    </v-content>-->
-    <v-navigation-drawer
-      class="d-sm-none app__menu__drawer rounded-l-xl "
-      style="z-index: 10000"
-      fixed
-      v-model="drawer"
-      temporary
-      right
-    >
-      <v-btn
-        @click="drawer = !drawer"
-        icon
-        x-large
-        class="app__menu__drawer-close ma-2"
-      >
-        <v-icon>mdi-close</v-icon>
-      </v-btn>
-
-      <v-list class="app__menu__drawer-list mx-10">
-        <v-list-item
-          :to="item.url"
-          class="app__menu__drawer-list-item my-5"
-          v-for="(item, index) in menuItems"
-          :key="index"
-        >
-          <v-list-item-content>
-            <v-list-item-title
-              class="app__navbar-menu-item"
-              style="font-size: 1.5rem !important;"
-              >{{ item.title }}</v-list-item-title
-            >
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-      <v-btn
-        class="btn app__menu__drawer-btn"
-        color="#155195"
-        outlined
-        rounded
-        width="7rem"
-        absolute
-      >
-        Начать
-      </v-btn>
-    </v-navigation-drawer>
     <Header :menu-items="menuItems" />
 
     <v-content>
@@ -187,12 +96,12 @@ export default {
         url: "/about"
       },
       {
-        name: "Обучение",
-        url: "/education"
+        name: "Команда",
+        url: "/team"
       },
       {
-        name: "Преподавание",
-        url: "/teaching"
+        name: "Обучение",
+        url: "/education"
       }
     ],
     drawer: false,
