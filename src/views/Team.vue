@@ -52,6 +52,10 @@ export default {
       {
         image: require("@/assets/img/team-8.png"),
         name: "Мелине Асрян"
+      },
+      {
+        image: require("@/assets/img/team-17.jpg"),
+        name: "Цовинар Карапетян"
       }
     ],
     teamSite: [
