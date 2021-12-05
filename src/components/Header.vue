@@ -35,7 +35,7 @@
         </a>
         <v-btn
           @click="draw = !draw"
-          class="ml-2"
+          class="ml-2 d-block d-sm-none"
           color="primary"
           fab
           light
@@ -48,7 +48,14 @@
         </v-btn>
       </ul>
     </v-app-bar>
-    <v-navigation-drawer class="navbar" v-model="draw" light app right fixed>
+    <v-navigation-drawer
+      class="navbar d-block d-sm-none"
+      v-model="draw"
+      light
+      app
+      right
+      fixed
+    >
       <div class="locale-mobile ml-4">
         <InlineLink @click="setLocale('ru')" :is-active="$i18n.locale === 'ru'"
           >Rus</InlineLink
