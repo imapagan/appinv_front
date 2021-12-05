@@ -63,7 +63,7 @@ export default {
       arrows: true,
       autoplay: true,
       speed: 300,
-      dots: true,
+      dots: false,
       infinite: true,
       slidesToShow: 3,
       centerMode: true,
@@ -89,10 +89,7 @@ export default {
         width: 100%
         text-align: center
         color: #313768
-        h1
-            //font-size: 3.4rem
         p
-            //font-size: 1.8rem
             a
                 color: #155195 !important
     &__carousel

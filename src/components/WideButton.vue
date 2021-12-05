@@ -27,6 +27,7 @@ export default {
   text-transform: unset
   font-size: 16px
   transition: .3s
+
   &:hover
     background: $primary
     color: #ffffff !important
