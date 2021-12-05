@@ -48,15 +48,8 @@
         </v-btn>
       </ul>
     </v-app-bar>
-    <v-navigation-drawer
-      class="navbar pl-4"
-      v-model="draw"
-      light
-      app
-      right
-      fixed
-    >
-      <div class="locale-mobile">
+    <v-navigation-drawer class="navbar" v-model="draw" light app right fixed>
+      <div class="locale-mobile ml-4">
         <InlineLink @click="setLocale('ru')" :is-active="$i18n.locale === 'ru'"
           >Rus</InlineLink
         >
@@ -73,16 +66,17 @@
           :key="item.url"
           link
           :to="item.url"
+          class="py-2"
         >
           <v-list-item-content>
-            <v-list-item-title class="pNormal mb-3">
+            <v-list-item-title class="pNormal">
               {{ item.name }}
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
       <a
-        class="startMobile"
+        class="startMobile ml-4"
         target="_blank"
         href="http://ai2.appinventor.mit.edu/?locale=ru"
       >
