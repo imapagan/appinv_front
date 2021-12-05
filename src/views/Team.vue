@@ -73,12 +73,12 @@ export default {
         image: require("@/assets/img/team-11.jpg"),
         name: "Гор Григорян",
         role: "Web-разработчик"
-      },
-      {
-        image: require("@/assets/img/team-12.png"),
-        name: "Лилит Мартиросян",
-        role: "Иллюстратор аватаров"
       }
+      // {
+      //   image: require("@/assets/img/team-12.png"),
+      //   name: "Лилит Мартиросян",
+      //   role: "Иллюстратор аватаров"
+      // }
     ],
     teamManagers: [
       // {
@@ -86,11 +86,11 @@ export default {
       //   name: "Милана Сугян",
       //   role: "Внешние связи"
       // },
-      {
-        image: require("@/assets/img/team-14.png"),
-        name: "Элина Минасян",
-        role: "Scrum мастер"
-      },
+      // {
+      //   image: require("@/assets/img/team-14.png"),
+      //   name: "Элина Минасян",
+      //   role: "Scrum мастер"
+      // },
       // {
       //   image: require("@/assets/img/team-15.jpg"),
       //   name: "Анна Нурбекян",
