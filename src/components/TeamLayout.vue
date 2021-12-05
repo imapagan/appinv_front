@@ -47,5 +47,11 @@ export default {
   grid-template-columns: repeat(4, 177px);
   grid-row-gap: 67px;
   justify-content: space-between;
+
+  @include phoneMedia {
+    grid-template-columns: 100%;
+    justify-content: center;
+    grid-row-gap: get-vw(32px);
+  }
 }
 </style>

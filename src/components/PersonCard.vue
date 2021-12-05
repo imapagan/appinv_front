@@ -21,6 +21,13 @@ export default {
 .personCard {
   text-align: center;
   width: 177px;
+
+  @include phoneMedia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .image {
@@ -34,6 +41,11 @@ export default {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+
+  @include phoneMedia {
+    width: get-vw(240px);
+    height: get-vw(240px);
   }
 }
 

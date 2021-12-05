@@ -120,5 +120,9 @@ export default {
 .description {
   margin-top: 43px;
   width: 90%;
+
+  @include phoneMedia {
+    width: 100%;
+  }
 }
 </style>
